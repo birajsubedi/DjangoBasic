@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>  
+{% for detail in details %}
+        <h1>Person {{forloop.counter}}</h1>
+         <h2>{{detail.Name}}</h2>
+         <h3>{{detail.Designation}}</h3>
+         <h3>{{detail.Study}}</h3>
+
+{%endfor%}
+</body>
+</html>
