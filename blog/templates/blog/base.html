@@ -10,12 +10,6 @@
 
 </head>
 <body>  
-{% for detail in details %}
-        <h1>Person {{forloop.counter}}</h1>
-         <h2>{{detail.Name}}</h2>
-         <h3>{{detail.Designation}}</h3>
-         <h3>{{detail.Study}}</h3>
-
-{%endfor%}
+{% block content %}{%endblock content%}
 </body>
 </html>
