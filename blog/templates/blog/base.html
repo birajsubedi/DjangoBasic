@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +7,15 @@
     {{else}}
     <title>Blog</title>
     {%endif%}
+
 </head>
-<body>
-    <h1>About!!!!</h1>
+<body>  
+{% for detail in details %}
+        <h1>Person {{forloop.counter}}</h1>
+         <h2>{{detail.Name}}</h2>
+         <h3>{{detail.Designation}}</h3>
+         <h3>{{detail.Study}}</h3>
+
+{%endfor%}
 </body>
 </html>
