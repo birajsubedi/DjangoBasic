@@ -1,26 +1,10 @@
 from django.shortcuts import render
+from .models import Post
 
-details = [
-    {
-        'Name': 'Biraj Subedi',
-        'Designation': 'TA',
-        'Study': 'BE in Computer Engineering'
-    },
-    {
-        'Name' : 'Vibek Subedi',
-        'Designation' : 'Site Engineer',
-        'Study' : 'BE in Electrical Engineering'
-    },
-    {
-        'Name' : 'Mahendra Rana',
-        'Designation' : 'Secondary Teacher',
-        'Study' : 'BSc'
-    }
-]
 
 def home(request):
-    info ={
-        'details' : details
+    info = {
+        'post' : Post.objects.all()
     }
     return render(request, 'blog/Home.html',info)
 

@@ -1,9 +1,16 @@
 {% extends "blog/base.html" %}
 {% block content %}
-  {% for detail in details %}
-      <h1>Person {{forloop.counter}}</h1>
-      <h2>{{detail.Name}}</h2>
-      <h3>{{detail.Designation}}</h3>
-      <h3>{{detail.Study}}</h3>
+  {% for post in post %}
+     
+      <article class="media content-section">
+         <div class="media-body">
+           <div class="article-metadata">
+             <a class="mr-2" href="#">{{post.author}}</a>
+             <small class="text-muted">{{ post.date_posted |date:"F d, Y"}}</small>
+           </div>
+           <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+           <p class="article-content">{{ post.content}}</p>
+         </div>
+       </article>
    {%endfor%}
 {%endblock content%}
